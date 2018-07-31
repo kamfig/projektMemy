@@ -13,4 +13,13 @@ public class MainController {
         modelMap.put("gifs",gifStaticDao.findAll());
         return "home";
     }
+
+    @GetMapping("/favorites")
+    public String listFavorites(ModelMap modelMap){
+        GifStaticDao gifStaticDao = new GifStaticDao();
+        modelMap.put("favorites",gifStaticDao.findAllFavorites());
+        return "favorites";
+    }
+
+
 }
