@@ -11,9 +11,10 @@ public class GifStaticDao implements GifDao {
     private static List<Gif> favorites = new LinkedList<>();
 
 
+
     static {
 
-        gifs.add( new Gif(1, "android-explosion",true));
+        gifs.add(new Gif(1, "android-explosion",true));
         gifs.add(new Gif (2, "ben-and-mike"));
         gifs.add(new Gif (3, "book-dominos"));
         gifs.add(new Gif (4, "compiler-bot",true));
