@@ -8,6 +8,8 @@ public interface GifDao {
     List<Gif> findAll();
     List<Gif> findAllFavorites();
 
+    Gif getGifById(int id);
+
 
 
 }

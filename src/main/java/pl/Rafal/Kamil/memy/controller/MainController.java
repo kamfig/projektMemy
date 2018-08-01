@@ -3,6 +3,7 @@ package pl.Rafal.Kamil.memy.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.Rafal.Kamil.memy.model.GifStaticDao;
@@ -38,5 +39,16 @@ public class MainController {
             modelMap.put("message", "EEEE Inne Errory");
         }
         return "home";
+    }
+//    @GetMapping("/gif/details")
+//    public String tego(){
+//        return "gif-details";
+//    }
+
+    @GetMapping("/gif/{id}")
+    public String detales(@PathVariable Integer id, ModelMap modelMap){
+        GifStaticDao gifStaticDao = new GifStaticDao();
+        modelMap.addAttribute("gif",gifStaticDao.getGifById(id).getName());
+        return "gif-details";
     }
 }
