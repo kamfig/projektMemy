@@ -4,6 +4,11 @@ body {
     font-family: 'varela round', sans-serif;
 }
 
+footer {
+    margin: 2px auto 0 auto;
+    text-align: center;
+}
+
 nav {
     background-color: #896bb3;
     box-shadow: none;
