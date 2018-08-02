@@ -3,8 +3,9 @@ package pl.Rafal.Kamil.memy.model;
 public class Gif {
     private Integer id;
     private String name;
-
+    private String ownerName;
     private boolean favorite;
+
 
     public boolean isFavorite() {
         return favorite;
@@ -16,6 +17,21 @@ public class Gif {
 
     //    public Gif(){
 //    }
+
+    public Gif(Integer id, String name, String ownerName, boolean favorite) {
+        this.id = id;
+        this.name = name;
+        this.ownerName = ownerName;
+        this.favorite = favorite;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
 
     public Gif(Integer id, String name) {
         this.id = id;
