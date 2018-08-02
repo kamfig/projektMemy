@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import pl.Rafal.Kamil.memy.model.Gif;
 import pl.Rafal.Kamil.memy.model.GifStaticDao;
 
 @Controller
@@ -48,7 +49,7 @@ public class MainController {
     @GetMapping("/gif/{id}")
     public String detales(@PathVariable Integer id, ModelMap modelMap){
         GifStaticDao gifStaticDao = new GifStaticDao();
-        modelMap.addAttribute("gif",gifStaticDao.getGifById(id).getName());
+        modelMap.addAttribute("gif",gifStaticDao.getGifById(id));
         return "gif-details";
     }
 }
